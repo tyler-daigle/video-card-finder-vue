@@ -73,3 +73,36 @@ input {
   font-family: inherit;
   font-size: 1.2rem;
 }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+.vid-card-item {
+  border: solid 1px var(--drac-yellow);
+  background-color: var(--drac-gray);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.vid-card-name {
+  color: var(--drac-pink);
+  margin: 0;
+}
+
+.vid-card-price {
+  color: var(--drac-green);
+  font-size: 1.2rem;
+}
+
+.vid-card-link {
+  color: var(--drac-orange);
+  text-decoration: none;
+  display: block;
+  background-color: var(--drac-blue);
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-align: center;
+}

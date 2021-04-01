@@ -36,9 +36,11 @@
       </div>
     </template>
     <button @click="showAddCardPopup" type="button">Add Video Card</button>
-    <button type="button">Open All</button>
+    <button type="button" @click="openAll">Open All</button>
     <div id="video-card-list">
-
+      <ul>
+        <vid-card-item v-for="vidCard in videoCardList" :name="vidCard.name" :price="vidCard.price" :link="vidCard.link"></vid-card-item>
+      </ul>
     </div>
   </div>
 
