@@ -12,7 +12,13 @@
 </head>
 <body>
   <h1 id="logo">Video Card Finder</h1>
-
+  <p>This was a quick app written as learning exercise for Vue JS.
+     You can add links to video cards that you want to check the 
+     availability of. The links will be saved to your localstorage.
+     Clicking the <strong>"Open All"</strong> button does exactly what it says and may
+     end up opening a ton of tabs. If it doesn't open any tabs then
+     your browser is most likely blocking popups.
+  </p>
   <div id="app">
     <template v-if="addPopupVisible">
       <div id="add-card-popup">
