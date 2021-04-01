@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Video Card Finder</title>
+</head>
+<body>
+  <h1 id="logo">Video Card Finder</h1>
+
+  <div id="app">
+    <template v-if="addPopupVisible">
+      <div id="add-card-popup">
+        <h2 id="popup-title">Add Video Card</h2>
+        <form>
+          <div id="popup-form-container">
+            <label for="video-card-name">Video Card Name: </label>
+            <input type="text" name="video-card-name" v-model="popupData.cardName">
+           
+            <label for="video-card-price">Price: </label>
+            <input type="number" name="video-card-price" v-model="popupData.cardPrice">
+  
+            <label for="video-card-link">Link: </label>
+            <input type="text" name="video-card-link" v-model="popupData.cardLink">
+            <div id="button-container">
+              <button type="button" @click="addVideoCard">Add</button>
+              <button type="button" @click="cancelAddVideoCard">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </template>
+    <button @click="showAddCardPopup" type="button">Add Video Card</button>
+    <button type="button">Open All</button>
+    <div id="video-card-list">
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
